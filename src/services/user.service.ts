@@ -5,7 +5,7 @@ export const createUser = async (data: { firstName: string; lastName: string; em
   return await prisma.user.create({
     data: {
       ...data,
-      password: data.password, // Şifreyi hash'lemeden kaydediyoruz
+      password: data.password,
     },
   });
 };
